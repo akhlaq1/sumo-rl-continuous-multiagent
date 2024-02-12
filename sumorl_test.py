@@ -44,9 +44,9 @@ def create_env():
                 out_csv_name='output.csv',
                 use_gui=False,
                 num_seconds=3600)
-    observations = env.reset()
+    observations, info = env.reset()
 
-    return env, observations
+    return env, observations, info
 
 # while env.agents:
 #     actions = {agent: env.action_space(agent).sample() for agent in env.agents}  # this is where you would insert your policy

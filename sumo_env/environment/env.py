@@ -288,7 +288,7 @@ class SumoEnvironment(gym.Env):
         if self.single_agent:
             return self._compute_observations()[self.ts_ids[0]], self._compute_info()
         else:
-            return self._compute_observations()
+            return self._compute_observations(), self._compute_info()
 
     @property
     def sim_step(self) -> float:
